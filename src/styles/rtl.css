@@ -1,0 +1,41 @@
+/* RTL specific overrides and typography fine-tuning */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] * {
+  letter-spacing: normal !important;
+}
+
+[dir="rtl"] .uppercase,
+[dir="rtl"] .capitalize {
+  text-transform: none !important;
+}
+
+/* Ensure line-height for Arabic headings and body */
+[dir="rtl"] h1 {
+  line-height: 1.35;
+}
+[dir="rtl"] h2 {
+  line-height: 1.4;
+}
+[dir="rtl"] h3 {
+  line-height: 1.45;
+}
+[dir="rtl"] p,
+[dir="rtl"] .body-text {
+  line-height: 1.8;
+}
+
+/* Directional flip helpers */
+[dir="rtl"] .mirror-rtl {
+  transform: scaleX(-1);
+}
+
+/* LTR islands inside Arabic */
+.ltr-island {
+  direction: ltr !important;
+  unicode-bidi: isolate;
+  display: inline-block;
+  text-align: left;
+}
